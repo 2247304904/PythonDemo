@@ -8,8 +8,8 @@ from langchain_core.language_models import LLM
 #示例原文 https://blog.csdn.net/2301_78285120/article/details/135302776
 
 class BaiChuanTest(LLM):
-    api_url = "https://api.auto-pai.cn/llm/gw/v1/chat/completions"
-    api_key = "94aa2eac224e41d0b32f635820d9e91d"
+    api_url = "XXX/v1/chat/completions"
+    api_key = "XXX"
     model: str = "baichuan2-13b-chat"
 
     # def __init__(self, model: str):
@@ -30,7 +30,7 @@ class BaiChuanTest(LLM):
     def _post(self, prompt: str) -> str:
         headers = {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 94aa2eac224e41d0b32f635820d9e91d'
+            'Authorization': 'Bearer XXXX'
         }
         data = {
             "model": self.model,  # 替换为实际模型名称
