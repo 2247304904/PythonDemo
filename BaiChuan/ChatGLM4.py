@@ -13,7 +13,7 @@ class BaiChuan(LLM):
         api_key = api_key
         model_name = model
         api_url = api_url
-        super().__init__()
+        # super().__init__()
         print("construct:" +model_name)
 
     def glm4_completion(self, message):
