@@ -6,14 +6,14 @@ from langchain_core.documents.base import Document as LangchainDocument
 from langchain_text_splitters import CharacterTextSplitter
 from langchain.chains.summarize import load_summarize_chain
 
-from BaiChuanTest1 import BaiChuanTest
+from BaiChuanTest1 import BaiChuan
 
 max_token = 50000
 docs = LangchainDocument(page_content="https://www.sina.com.cn/", metadata={})
 
 
 
-llm = BaiChuanTest()
+llm = BaiChuan()
 
 chain = load_summarize_chain(llm, chain_type="refine")
 text_splitter = CharacterTextSplitter.from_tiktoken_encoder(

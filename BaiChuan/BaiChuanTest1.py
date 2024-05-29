@@ -7,7 +7,7 @@ from langchain_core.language_models import LLM
 
 #示例原文 https://blog.csdn.net/2301_78285120/article/details/135302776
 
-class BaiChuanTest(LLM):
+class BaiChuan(LLM):
     api_url = "XXX/v1/chat/completions"
     api_key = "XXX"
     model: str = "baichuan2-13b-chat"
@@ -52,5 +52,5 @@ class BaiChuanTest(LLM):
 
 
 if __name__ == '__main__':
-    llm = BaiChuanTest('spark')
+    llm = BaiChuan('spark')
     print(llm("你好"))
